@@ -10,4 +10,4 @@ kubeadm reset
 sudo swapoff -a
 IP_ADDR=$(ip addr show enp3s0 | grep -Po 'inet \K[\d.]+')
 # With "CoreDNS" addon (recommended)
-kubeadm init --feature-gates=CoreDNS=true --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=${IP_ADDR} --kubernetes-version v1.12.0
+kubeadm init --feature-gates=CoreDNS=true --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=${IP_ADDR} --kubernetes-version v1.12.0 --ignore-preflight-errors=true
