@@ -1,7 +1,7 @@
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo rm -rf /etc/kubernetes
-apt-get install -y apt-transport-https curl
+sudo apt-get install -y apt-transport-https curl
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 deb https://apt.kubernetes.io/ kubernetes-xenial main
