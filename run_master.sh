@@ -1,8 +1,11 @@
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo rm -rf /etc/kubernetes
-#sudo rm -rf /var/lib/docker/*
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
+apt-get install -y apt-transport-https curl
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+EOF
 sudo apt-get install -y docker.io kubelet kubeadm kubectl kubernetes-cni nfs-common
 sudo systemctl start docker
 sudo systemctl enable docker
