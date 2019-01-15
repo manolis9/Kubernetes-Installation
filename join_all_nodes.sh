@@ -5,7 +5,7 @@ token=$(kubeadm token create --ttl 0)
 
 echo "kubeslave1"
 #set up sftp
-sshpass -p kube ssh kube@137.82.223.110 "echo kube | sudo -S apt-get install vsftpd"
+sshpass -p kube ssh kube@137.82.223.110 "echo kube | sudo -S apt-get install -y vsftpd"
 sshpass -p kube ssh kube@137.82.223.110 "echo kube | sudo -S mv /etc/vsftpd.conf /etc/vsftpd.conf_orig
 sshpass -p kube ssh kube@137.82.223.110 "echo kube | sudo -S echo "
 listen=NO
@@ -37,7 +37,7 @@ sshpass -p kube ssh kube@137.82.223.110 "echo kube | sudo -S kubeadm join 137.82
 
 echo "kubeslave2"
 #set up sftp
-sshpass -p kube ssh kube@137.82.223.149 "echo kube | sudo -S apt-get install vsftpd"
+sshpass -p kube ssh kube@137.82.223.149 "echo kube | sudo -S apt-get install -y vsftpd"
 sshpass -p kube ssh kube@137.82.223.149 "echo kube | sudo -S mv /etc/vsftpd.conf /etc/vsftpd.conf_orig
 sshpass -p kube ssh kube@137.82.223.149 "echo kube | sudo -S echo "
 listen=NO
@@ -69,7 +69,7 @@ sshpass -p kube ssh kube@137.82.223.149 "echo kube | sudo -S kubeadm join 137.82
 
 echo "kubeslave3"
 #set up sftp
-sshpass -p kube ssh kube@137.82.223.114 "echo kube | sudo -S apt-get install vsftpd"
+sshpass -p kube ssh kube@137.82.223.114 "echo kube | sudo -S apt-get install -y vsftpd"
 sshpass -p kube ssh kube@137.82.223.114 "echo kube | sudo -S mv /etc/vsftpd.conf /etc/vsftpd.conf_orig
 sshpass -p kube ssh kube@137.82.223.114 "echo kube | sudo -S echo "
 listen=NO
@@ -101,7 +101,7 @@ sshpass -p kube ssh kube@137.82.223.114 "echo kube | sudo -S kubeadm join 137.82
 
 echo "kubeslave4"
 #set up sftp
-sshpass -p kube ssh kube@137.82.223.96 "echo kube | sudo -S apt-get install vsftpd"
+sshpass -p kube ssh kube@137.82.223.96 "echo kube | sudo -S apt-get install -y vsftpd"
 sshpass -p kube ssh kube@137.82.223.96 "echo kube | sudo -S mv /etc/vsftpd.conf /etc/vsftpd.conf_orig
 sshpass -p kube ssh kube@137.82.223.96 "echo kube | sudo -S echo "
 listen=NO
@@ -133,7 +133,7 @@ sshpass -p kube ssh kube@137.82.223.96 "echo kube | sudo -S kubeadm join 137.82.
 
 echo "kubeslave5"
 #set up sftp
-sshpass -p kube ssh kube@137.82.223.95 "echo kube | sudo -S apt-get install vsftpd"
+sshpass -p kube ssh kube@137.82.223.95 "echo kube | sudo -S apt-get install -y vsftpd"
 sshpass -p kube ssh kube@137.82.223.95 "echo kube | sudo -S mv /etc/vsftpd.conf /etc/vsftpd.conf_orig
 sshpass -p kube ssh kube@137.82.223.95 "echo kube | sudo -S echo "
 listen=NO
